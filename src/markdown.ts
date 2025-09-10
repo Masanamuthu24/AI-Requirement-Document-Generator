@@ -14,7 +14,7 @@ export async function generateMarkdown(
   const fileName = `Requirements_${Date.now()}.md`;
   const filePath = path.join(outDir, fileName);
 
-  // ✅ Heading prefix based on style
+  // Heading prefix based on style
   const h1 = style === "corporate" ? "# " : "# ";
   const h2 = style === "corporate" ? "## " : "## ";
   const h3 = style === "corporate" ? "### " : "### ";
@@ -24,7 +24,7 @@ export async function generateMarkdown(
     ? "Documento de requisitos del chatbot de IA"
     : data.title || "AI Chatbot Requirement Document"}\n\n`;
 
-  // ✅ Table of Contents
+  // Table of Contents
   md += `${h2}${lang === "es"
     ? "Tabla de contenido"
     : "Table of Contents"}\n\n`;
@@ -40,7 +40,7 @@ export async function generateMarkdown(
   });
   md += `\n---\n`;
 
-  // ✅ Table of Figures
+  // Table of Figures
   if (data.figures && data.figures.length > 0) {
     md += `\n${h2}${lang === "es"
       ? "Tabla de figuras"
@@ -51,7 +51,7 @@ export async function generateMarkdown(
     md += `\n`;
   }
 
-  // ✅ Sections
+  //  Sections
   (data.sections || []).forEach((s) => {
     md += `\n${h2}${s.heading}\n\n`;
     (s.bullets || []).forEach((b) => (md += `${bullet}${b}\n`));
@@ -62,7 +62,7 @@ export async function generateMarkdown(
     });
   });
 
-  // ✅ Assumptions
+  //  Assumptions
   if (data.assumptions && data.assumptions.length > 0) {
     md += `\n${h2}${lang === "es"
       ? "Suposiciones"
@@ -70,7 +70,7 @@ export async function generateMarkdown(
     data.assumptions.forEach((a) => (md += `${bullet}${a}\n`));
   }
 
-  // ✅ Out of Scope
+  //  Out of Scope
   if (data.outOfScope && data.outOfScope.length > 0) {
     md += `\n${h2}${lang === "es"
       ? "Fuera de alcance"

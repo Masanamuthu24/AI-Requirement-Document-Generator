@@ -16,7 +16,7 @@ export async function generatePdf(
   const fileName = `Requirements_${Date.now()}.pdf`;
   const filePath = path.join(outDir, fileName);
 
-  // ✅ Style settings
+  // Style settings
   const heading1Size = style === "corporate" ? 18 : 16;
   const heading2Size = style === "corporate" ? 14 : 12;
   const normalSize = style === "corporate" ? 12 : 10;
@@ -30,7 +30,7 @@ export async function generatePdf(
   // Set default font
   doc.font("Times-Roman");
 
-  // ✅ Title Page
+  // Title Page
   doc.fontSize(24).font("Times-Bold").text(
     lang === "es"
       ? "Documento de requisitos del chatbot de IA"
@@ -39,7 +39,7 @@ export async function generatePdf(
   );
   doc.moveDown(2);
 
-  // ✅ Table of Contents
+  // Table of Contents
   doc.fontSize(heading1Size).font("Times-Bold").text(
     lang === "es"
       ? "Tabla de contenido"
@@ -53,7 +53,7 @@ export async function generatePdf(
   });
   doc.moveDown(1);
 
-  // ✅ Table of Figures
+  // Table of Figures
   if (data.figures && data.figures.length > 0) {
     doc.fontSize(heading1Size).font("Times-Bold").text(
       lang === "es" ? "Tabla de figuras" : "Table of Figures"
@@ -67,7 +67,7 @@ export async function generatePdf(
     doc.moveDown(1);
   }
 
-  // ✅ Sections
+  //  Sections
   data.sections.forEach((section) => {
     doc.fontSize(heading1Size).font("Times-Bold").text(section.heading);
     doc.moveDown(0.5);
@@ -90,7 +90,7 @@ export async function generatePdf(
     doc.moveDown(1);
   });
 
-  // ✅ Assumptions
+  //  Assumptions
   if (data.assumptions && data.assumptions.length > 0) {
     doc.fontSize(heading1Size).font("Times-Bold").text(
       lang === "es" ? "Suposiciones" : "Assumptions"
@@ -102,7 +102,7 @@ export async function generatePdf(
     doc.moveDown(1);
   }
 
-  // ✅ Out of Scope
+  //  Out of Scope
   if (data.outOfScope && data.outOfScope.length > 0) {
     doc.fontSize(heading1Size).font("Times-Bold").text(
       lang === "es" ? "Fuera de alcance" : "Out of Scope"

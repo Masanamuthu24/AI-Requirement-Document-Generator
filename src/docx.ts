@@ -27,7 +27,7 @@ export async function generateDocx(
 
   const children: Paragraph[] = [];
 
-  // ✅ Title Page
+  //  Title Page
   children.push(
     new Paragraph({
       children: [
@@ -45,7 +45,7 @@ export async function generateDocx(
     })
   );
 
-  // ✅ TOC Section
+  //  TOC Section
   children.push(
     new Paragraph({
       children: [
@@ -74,7 +74,7 @@ export async function generateDocx(
     )
   );
 
-  // ✅ Table of Figures
+  //  Table of Figures
   if (data.figures && data.figures.length > 0) {
     children.push(
       new Paragraph({
@@ -95,7 +95,7 @@ export async function generateDocx(
     });
   }
 
-  // ✅ Sections
+  //  Sections
   for (const section of data.sections || []) {
     children.push(
       new Paragraph({
@@ -136,7 +136,7 @@ export async function generateDocx(
     });
   }
 
-  // ✅ Assumptions
+  //  Assumptions
   if (data.assumptions && data.assumptions.length > 0) {
     children.push(
       new Paragraph({
@@ -158,7 +158,7 @@ export async function generateDocx(
     );
   }
 
-  // ✅ Out of Scope
+  //  Out of Scope
   if (data.outOfScope && data.outOfScope.length > 0) {
     children.push(
       new Paragraph({
@@ -180,7 +180,7 @@ export async function generateDocx(
     );
   }
 
-  // ✅ Build DOC with Times New Roman
+  //  Build DOC with Times New Roman
   const doc = new Document({
     sections: [{ children }],
     numbering: {
