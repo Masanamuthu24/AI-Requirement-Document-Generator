@@ -65,7 +65,11 @@
     ├─ server.ts        # Express API entry point
     ├─ graph.ts         # Workflow orchestration
     ├─ docx.ts          # DOCX generation logic
+    ├─ markdown.ts      # MD generation logic
+    ├─ pdf.ts           # PDF generation logic
     ├─ llm.ts           # OpenAI helper functions
+    ├─ translate.ts     # Translate the content based on user language selection
+    ├─ formatUtils.ts   # To ensure the formats on across different formats
     ├─ prompt.ts        # AI prompt templates
     ├─ preprocess.ts    # Input cleaning
     ├─ types.ts         # Types & validation schemas
