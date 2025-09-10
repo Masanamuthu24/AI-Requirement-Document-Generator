@@ -18,7 +18,7 @@
   ### 1. Clone Repository
   
     git clone https://github.com/Masanamuthu24/AI-Requirement-Document-Generator.git
-    cd ai-reqdoc-bot
+    cd AI-Requirement-Document-Generator
   
   ### 2. Install Dependencies
   
