@@ -17,7 +17,7 @@ app.post("/generate-doc", async (req, res) => {
   try {
     const parsed = GenerateDocSchema.parse(req.body);
 
-    const filePath = await runWorkflow(parsed.requirementsText);
+    const filePath = await runWorkflow(parsed);
     const fileName = path.basename(filePath);
     const base = process.env.BASE_URL ?? `http://localhost:${process.env.PORT || 3000}`;
     const downloadUrl = `${base}/downloads/${fileName}`;
@@ -35,7 +35,6 @@ app.post("/generate-doc", async (req, res) => {
     });
   }
 });
-
 const PORT = Number(process.env.PORT || 3000);
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
