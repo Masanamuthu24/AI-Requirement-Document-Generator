@@ -17,7 +17,7 @@
 
   ### 1. Clone Repository
   
-    git clone https://github.com/your-username/ai-reqdoc-bot.git
+    git clone https://github.com/Masanamuthu24/AI-Requirement-Document-Generator.git
     cd ai-reqdoc-bot
   
   ### 2. Install Dependencies
@@ -26,7 +26,7 @@
   
   ### 3. Configure Environment Variables
   
-    Create a .env file in the root folder:
+    Create a .env file in the root folder and put the below variables in the same file (API Key will be shared via email):
     
     OPENAI_API_KEY=your-openai-api-key
     PORT=3000
@@ -36,27 +36,28 @@
   
     npm run dev
     
-    Server will be available at:
+    Server will be available at:  http://localhost:3000
     
-    http://localhost:3000
-    
-    API Usage Endpoint
-    
-    POST /generate-doc
-    Request Body
-    json
-    {
-      "requirementsText": "The chatbot must support English and Spanish. It should integrate with CRM. It must be available 24/7. Assumptions: Users have internet access."
-    }
-    Example Response
-    json
-    
+    API Usage Endpoint  : POST /generate-doc
+    Request Body :
+     {
+      "requirementsText": "The chatbot should answer customer queries, support FAQs, and escalate to human agents when needed.",
+      "format": "docx", 
+      "style": "corporate", 
+      "language": "en"
+     }
+
+    Example Response json :
       {
         "ok": true,
         "message": "Requirement document generated successfully.",
         "downloadUrl": "http://localhost:3000/downloads/Requirements_1725600000000.docx"
       }
-    Use the downloadUrl to fetch the generated document.
+      
+    Use the downloadUrl to fetch the generated document as shown below.
+
+<img width="1209" height="689" alt="image" src="https://github.com/user-attachments/assets/1aab5894-5d7f-481f-a425-45215c872c08" />
+
   
   ## Project Structure
   
