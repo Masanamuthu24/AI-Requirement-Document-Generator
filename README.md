@@ -16,9 +16,11 @@
 ## Setup
 
   ### 1. Clone Repository
-  
-    git clone https://github.com/Masanamuthu24/AI-Requirement-Document-Generator.git
-    cd AI-Requirement-Document-Generator
+    create a folder (any name) and cd <created folder name>
+    open cmd and run these below commands to clone the project (ensure that you have git installed in your system).
+    
+        git clone https://github.com/Masanamuthu24/AI-Requirement-Document-Generator.git
+        cd AI-Requirement-Document-Generator
   
   ### 2. Install Dependencies
   
