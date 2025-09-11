@@ -25,7 +25,8 @@
   ### 2. Install Dependencies
   
     npm install
-  
+    code .
+    
   ### 3. Configure Environment Variables
   
     Create a .env file in the root folder and put the below variables in the same file (API Key will be shared via email):
