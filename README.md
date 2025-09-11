@@ -42,13 +42,14 @@
     Server will be available at:  http://localhost:3000
     
     API Usage Endpoint  : POST /generate-doc
+    
     Request Body :
-     {
-      "requirementsText": "The chatbot should answer customer queries, support FAQs, and escalate to human agents when needed.",
-      "format": "docx", 
-      "style": "corporate", 
-      "language": "en"
-     }
+        {
+            "requirementsText": "The chatbot should answer customer queries, support FAQs, and escalate to human agents when needed.",
+            "format": "docx", // format options : docx, pdf, md
+            "style": "corporate", //format style : corporate, minimal 
+            "language": "en"
+        }
 
     Example Response json :
       {
