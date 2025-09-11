@@ -55,6 +55,7 @@
       }
       
     Use the downloadUrl to fetch the generated document as shown below.
+<img width="829" height="475" alt="image" src="https://github.com/user-attachments/assets/cc139fc8-49fd-4a96-9494-3c504bd97815" />
 
 <img width="1209" height="689" alt="image" src="https://github.com/user-attachments/assets/1aab5894-5d7f-481f-a425-45215c872c08" />
 
