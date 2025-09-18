@@ -23,8 +23,12 @@
         cd AI-Requirement-Document-Generator
   
   ### 2. Install Dependencies
-  
+    Please cleanup nodemodule, package.lock.json before install node version(if present)
+    
+    Please make sure that you have 24.4.1 or 24.8.0 node version and use node -version to check the version of the node
+    
     npm install
+    
     code .
     
   ### 3. Configure Environment Variables
